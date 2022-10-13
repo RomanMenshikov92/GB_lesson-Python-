@@ -22,6 +22,15 @@ print(f'Произведение элементов на указанных по
 
 str_pos = str(multi)
 
-with open('file.txt', 'w') as data:
+import os.path
+directory = './homework-2/'
+filename = "file.html"
+file_path = os.path.join(directory, filename)
+if not os.path.isdir(directory):
+    os.mkdir(directory)
+with open(file_path, 'w') as data:
     data.writelines(str_pos)
 data.close()
+
+
+
